@@ -4,9 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import CustomButton from "../CustomButton";
 import NavLinks from "./NavLinks";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineShopping,
+} from "react-icons/ai";
 import { useState } from "react";
-import { ShoppingCart, ShoppingCartOutlined } from "@material-ui/icons";
+
 import { useSelector, useDispatch } from "react-redux";
 import { getCartTotal } from "../../redux/cartSlice";
 
@@ -89,7 +93,7 @@ const Navbar = () => {
           <div className="absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center cursor-pointer">
             {itemCount}
           </div>
-          <ShoppingCartOutlined />
+          <AiOutlineShopping />
         </Link>
       </nav>
     </header>

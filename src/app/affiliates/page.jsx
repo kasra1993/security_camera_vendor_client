@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 const westAffiliateArray = [
   {
@@ -9,9 +11,9 @@ const westAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -22,9 +24,9 @@ const westAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -35,9 +37,9 @@ const westAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -48,9 +50,9 @@ const westAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -61,9 +63,9 @@ const westAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
 ];
@@ -76,9 +78,9 @@ const eastAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -89,9 +91,9 @@ const eastAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -102,9 +104,9 @@ const eastAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -115,9 +117,9 @@ const eastAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -128,9 +130,9 @@ const eastAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
 ];
@@ -143,9 +145,9 @@ const centralAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -156,9 +158,9 @@ const centralAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -169,9 +171,9 @@ const centralAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -182,9 +184,9 @@ const centralAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
   {
@@ -195,9 +197,9 @@ const centralAffiliateArray = [
     description:
       "some description about this person and the kind of work he does at his company",
     links: {
-      twitter: "#",
-      instagram: "#",
-      facebook: "#",
+      twitter: "/",
+      instagram: "/",
+      facebook: "/",
     },
   },
 ];
@@ -210,11 +212,14 @@ const Affiliates = () => {
       <div
         role="listitem"
         className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+        key={item.name}
       >
         <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-900">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-32 w-32">
-              <img
+              <Image
+                width={300}
+                height={300}
                 src={item.logo}
                 alt={item.name}
                 role="img"
@@ -233,30 +238,37 @@ const Affiliates = () => {
               {item.description}
             </p>
             <div className="w-full flex justify-center pt-5 pb-5">
-              <a href="javascript:void(0)" className="mx-5">
+              <Link href="/" className="mx-5">
                 <div aria-label="Github" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
                     alt="github"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Twitter" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg2.svg"
                     alt="twitter"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
                 <div aria-label="Instagram" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg3.svg"
                     alt="instagram"
                   />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -267,11 +279,14 @@ const Affiliates = () => {
       <div
         role="listitem"
         className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+        key={item.name}
       >
         <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-900">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-32 w-32">
-              <img
+              <Image
+                width={300}
+                height={300}
                 src={item.logo}
                 alt={item.name}
                 role="img"
@@ -290,30 +305,39 @@ const Affiliates = () => {
               {item.description}
             </p>
             <div className="w-full flex justify-center pt-5 pb-5">
-              <a href="javascript:void(0)" className="mx-5">
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Github" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
                     alt="github"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Twitter" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={5}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg2.svg"
                     alt="twitter"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Instagram" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg3.svg"
                     alt="instagram"
                   />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -324,11 +348,14 @@ const Affiliates = () => {
       <div
         role="listitem"
         className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+        key={item.name}
       >
         <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-900">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-32 w-32">
-              <img
+              <Image
+                width={300}
+                height={300}
                 src={item.logo}
                 alt={item.name}
                 role="img"
@@ -347,30 +374,39 @@ const Affiliates = () => {
               {item.description}
             </p>
             <div className="w-full flex justify-center pt-5 pb-5">
-              <a href="javascript:void(0)" className="mx-5">
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Github" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg"
                     alt="github"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Twitter" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg2.svg"
                     alt="twitter"
                   />
                 </div>
-              </a>
-              <a href="javascript:void(0)" className="mx-5">
+              </Link>
+              <Link href="/" className="mx-5">
+                {" "}
                 <div aria-label="Instagram" role="img">
-                  <img
+                  <Image
+                    width={25}
+                    height={25}
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg3.svg"
                     alt="instagram"
                   />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

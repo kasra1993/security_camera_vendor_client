@@ -1,6 +1,8 @@
 export const products = [
   {
-    image: "/camera.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Spark",
     model: "TC-C32XN",
     Features: [
@@ -31,7 +33,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera1.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Spark",
     model: "TC-C32QN",
     Features: [
@@ -61,7 +65,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera2.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Lite Series Starlight",
     model: "TC-C34GN",
     Features: [
@@ -92,7 +98,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera3.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Lite Series WiFi",
     model: "TC-C32WN",
     Features: [
@@ -124,7 +132,10 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera4.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
+
     Series: "Pro Series StarLight",
     model: "TC-H326S",
     Features: [
@@ -154,7 +165,10 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
+
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -190,7 +204,10 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
+
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -226,7 +243,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -262,7 +281,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -298,7 +319,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -334,7 +357,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -370,7 +395,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [
@@ -406,7 +433,9 @@ export const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem ducimus soluta tempora, et quas sed ab quae dignissimos dolorem.",
   },
   {
-    image: "/camera5.png",
+    image: {
+      url: "https://res.cloudinary.com/djgwmcmoj/image/upload/v1705133016/products/auz5f8w4qoff5erqnzl9.jpg",
+    },
     Series: "Ultra Series - Panoramic PTZ Camera",
     model: "TC-H3169M Spec: 63X/ LW/P/A/AR",
     Features: [

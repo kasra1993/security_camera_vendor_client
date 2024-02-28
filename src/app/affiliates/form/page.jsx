@@ -1,10 +1,10 @@
 import React from "react";
-
+import Link from "next/link";
 const AffiliateForm = () => {
   return (
     <section className="text-gray-600 body-font relative h-auto">
       <div className="container px-5 pt-10 pb-20 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <div className="lg:w-2/3 md:w-1/2  rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
             height="100%"
@@ -29,9 +29,9 @@ const AffiliateForm = () => {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-indigo-500 leading-relaxed">
+              <Link className="text-indigo-500 leading-relaxed" href="/">
                 example@email.com
-              </a>
+              </Link>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>
@@ -39,7 +39,7 @@ const AffiliateForm = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <div className="lg:w-1/3 md:w-1/2  flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-gray-900 text-3xl font-medium mb-5  title-font">
             Vendor Registration
           </h2>
@@ -97,9 +97,9 @@ const AffiliateForm = () => {
           </button>
           <p className="text-xs text-gray-500 mt-3">
             By sending information you are accepting our{" "}
-            <a className="text-blue-700" href="/policies">
+            <Link className="text-blue-700" href="/policies">
               PRIVACY POLICIES
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -18,7 +18,7 @@ const About = () => {
             alt="about us"
             width={700}
             height={800}
-            className="ml-72 mx-auto"
+            className="ml-72 mx-auto object-cover"
           />
         </motion.div>
 
@@ -36,13 +36,13 @@ const About = () => {
           </h1>
 
           <p className="mt-3 text-white dark:text-white text-lg leading-7">
-            It's not every day that you find a group like us _ a direct dealer
-            of security cameras with a business to business model, supporting
-            all scopes of orders through the whole continent, dealing with
-            installers, integrators, and wholesalers. Warning: Please do NOT
-            proceed further if you are an END-USER It's not every day that you
-            find a group like us _ a direct dealer of security cameras with a
-            business to business model.
+            It&apos;s not every day that you find a group like us _ a direct
+            dealer of security cameras with a business to business model,
+            supporting all scopes of orders through the whole continent, dealing
+            with installers, integrators, and wholesalers. Warning: Please do
+            NOT proceed further if you are an END-USER It&apos;s not every day
+            that you find a group like us _ a direct dealer of security cameras
+            with a business to business model.
           </p>
         </motion.div>
       </div>

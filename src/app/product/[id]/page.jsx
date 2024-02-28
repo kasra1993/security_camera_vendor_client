@@ -1,37 +1,63 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
-import toast from "react-hot-toast";
+import { getDetailProduct } from "../../../redux/productSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../../redux/cartSlice";
+import Link from "next/link";
 
 const Product = (props) => {
   const [show2, setShow2] = useState(false);
   const [show, setShow] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+
   const params = useParams();
+  const id = params.id;
 
-  const uid = params.id;
+  const productDetail = useSelector((state) => state.products.productDetail);
+  const productsDetailStatus = useSelector(
+    (state) => state.products.productsDetailStatus
+  );
+  const { model, _id, price, subcategories, image, description } =
+    productDetail;
+  const dispatch = useDispatch();
 
-  const getProduct = async (id) => {
-    try {
-      const respJSON = await fetch(
-        `http://localhost:8080/server/product/${uid}`
-      );
-      const resp = await respJSON.json();
-      return resp;
-    } catch (error) {
-      throw error;
+  const handleIncrement = () => {
+    if (productDetail) {
+      setQuantity(quantity + 1);
     }
   };
-  const { data, isLoading } = useQuery(["product", uid], getProduct);
-  if (!isLoading || data) {
-    var { model, _id, price, subcategories, image, description } = data;
-  }
-  const onAddToCart = () => {
-    addItemToCart(data);
-    toast.success("Added to cart");
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
   };
 
+  const addBasket = () => {
+    const itemToAdd = {
+      id: _id,
+      title: model,
+      image: image.url,
+      price: price,
+      quantity: quantity,
+    };
+
+    dispatch(addToCart(itemToAdd));
+  };
+
+  useEffect(() => {
+    dispatch(getDetailProduct(id));
+  }, [dispatch, id]);
+
+  if (productsDetailStatus === "LOADING") {
+    return (
+      <div className="h-screen w-full text-center mt-72">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
       <div className="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
@@ -126,8 +152,10 @@ const Product = (props) => {
         <div className="py-4 border-b border-gray-200 flex items-center justify-between">
           <p className="text-base leading-4 text-gray-800">Price</p>
           <div className="flex items-center justify-center">
-            <p className="text-sm leading-none text-gray-600">{price}</p>
-            <div
+            <p className="text-sm leading-none text-gray-600">
+              {price}$ &nbsp;
+            </p>
+            {/* <div
               className="
 								w-6
 								h-6
@@ -138,7 +166,7 @@ const Product = (props) => {
 								mr-4
 								cursor-pointer
 							"
-            ></div>
+            ></div> */}
             <svg
               className="cursor-pointer"
               width="6"
@@ -161,7 +189,9 @@ const Product = (props) => {
           <p className="text-base leading-4 text-gray-800">SubCategories</p>
           <div className="flex items-center justify-center">
             <p className="text-sm leading-none text-gray-600 mr-3">
-              {subcategories}
+              {subcategories
+                ? subcategories.map((sub) => <p key={sub.title}>{sub.title}</p>)
+                : null}
             </p>
             <svg
               className="cursor-pointer"
@@ -234,6 +264,27 @@ const Product = (props) => {
             />
           </svg>
           Download Info Sheet
+        </button>
+        <div className="flex items-center mt-5">
+          <button
+            className="bg-gray-200 text-gray-600 px-4 py-1 rounded hover:bg-gray-300"
+            onClick={handleDecrement}
+          >
+            -
+          </button>
+          <span className="mx-4">{quantity}</span>
+          <button
+            className="bg-gray-200 text-gray-600 px-4 py-1 rounded-lg hover:bg-gray-300"
+            onClick={handleIncrement}
+          >
+            +
+          </button>
+        </div>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 mb-4 mt-4" // mt-4 ekleyin
+          onClick={addBasket}
+        >
+          Add to Basket
         </button>
 
         <div>
@@ -344,9 +395,9 @@ const Product = (props) => {
               id="sect"
             >
               If you have any questions on how to return your item to us &nbsp;
-              <a href="/contact" className="text-blue-700">
+              <Link href="/contact" className="text-blue-700">
                 contact us
-              </a>
+              </Link>
               .
             </div>
           </div>

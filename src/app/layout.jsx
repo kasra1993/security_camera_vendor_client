@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Security Camera Vendor",
   description: "Security , Camera , Vendor , Canada , USA ",
+  content: "upgrade-insecure-requests",
 };
 
 export default function RootLayout({ children }) {

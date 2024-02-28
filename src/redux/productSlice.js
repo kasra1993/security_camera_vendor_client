@@ -20,7 +20,7 @@ export const getProducts = createAsyncThunk("getProducts", async () => {
 
 export const getDetailProduct = createAsyncThunk("getProduct", async (id) => {
   const response = await fetch(
-    `http://server.chiliscript.de/server/product/${id}`
+    `https://server.chiliscript.de/server/product/${id}`
   );
   const data = await response.json();
   return data;
@@ -28,7 +28,7 @@ export const getDetailProduct = createAsyncThunk("getProduct", async (id) => {
 
 export const getCategories = createAsyncThunk("getCategories", async () => {
   const response = await fetch(
-    "http://server.chiliscript.de/server/categories"
+    "https://server.chiliscript.de/server/categories"
   );
   const data = await response.json();
   return data;
@@ -37,7 +37,7 @@ export const getSubCategories = createAsyncThunk(
   "getSubCategories",
   async (id) => {
     const response = await fetch(
-      `http://server.chiliscript.de/server/getCategory/${id}`
+      `https://server.chiliscript.de/server/getCategory/${id}`
     );
     const data = await response.json();
     return data;

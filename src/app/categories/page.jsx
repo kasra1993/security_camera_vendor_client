@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { useQuery } from "@tanstack/react-query";
 import Loading from "../../components/Loading";
 import Image from "next/image";
 import { getCategories } from "../../redux/productSlice";

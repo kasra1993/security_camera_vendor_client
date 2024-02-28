@@ -11,9 +11,7 @@ const Cart = () => {
   const carts = useSelector((state) => state.cart.carts);
   // const totalAmount = useSelector((state) => state.carts.totalAmount);
   // const itemCount = useSelector((state) => state.carts.itemCount);
-  if (carts) {
-    console.log(carts, "CARTS");
-  }
+
   useEffect(() => {
     dispatch(getCartTotal());
   }, [dispatch]);

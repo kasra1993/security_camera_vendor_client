@@ -18,7 +18,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const itemCount = useSelector((state) => state.cart.itemCount);
-  console.log(itemCount, "ITEMCOUNT");
+
   useEffect(() => {
     dispatch(getCartTotal());
   }, [dispatch]);

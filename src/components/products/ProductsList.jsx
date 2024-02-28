@@ -4,7 +4,7 @@ import ProductItem from "./ProductItem";
 const ProductsList = (props) => {
   const { data, status } = props;
   var productsArray = [];
-  console.log(data, status, "DATA AND STATUS");
+
   if (status !== "LOADING" && data) {
     data?.subcategories?.map((subcat) => {
       if (subcat.products.length > 0) {

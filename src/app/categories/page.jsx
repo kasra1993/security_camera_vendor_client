@@ -16,6 +16,9 @@ const Categories = () => {
   useEffect(() => {
     dispatch(getCategories());
   }, [dispatch]);
+  if (categories) {
+    console.log(categories, "CATEGORIES");
+  }
 
   return (
     <div className="h-screen">

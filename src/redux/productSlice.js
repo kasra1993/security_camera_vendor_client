@@ -19,25 +19,22 @@ export const getProducts = createAsyncThunk("getProducts", async () => {
 });
 
 export const getDetailProduct = createAsyncThunk("getProduct", async (id) => {
-  const response = await fetch(
-    `http://server.chiliscript.de/server/product/${id}`
-  );
+  const response = await fetch(`${process.env.VITE_REACT_APP}product/${id}`);
   const data = await response.json();
   return data;
 });
 
 export const getCategories = createAsyncThunk("getCategories", async () => {
-  const response = await fetch(
-    "http://server.chiliscript.de/server/categories"
-  );
+  const response = await fetch(`${process.env.VITE_REACT_APP}categories`);
   const data = await response.json();
+  console.log(data);
   return data;
 });
 export const getSubCategories = createAsyncThunk(
   "getSubCategories",
   async (id) => {
     const response = await fetch(
-      `http://server.chiliscript.de/server/getCategory/${id}`
+      `${process.env.VITE_REACT_APP}getCategory/${id}`
     );
     const data = await response.json();
     return data;

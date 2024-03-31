@@ -9,6 +9,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    VITE_REACT_APP: process.env.VITE_REACT_APP,
+  },
 };
 
 module.exports = nextConfig;

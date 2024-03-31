@@ -25,9 +25,11 @@ export const getDetailProduct = createAsyncThunk("getProduct", async (id) => {
 });
 
 export const getCategories = createAsyncThunk("getCategories", async () => {
+  console.log(process.env.VITE_REACT_APP);
   const response = await fetch(`${process.env.VITE_REACT_APP}categories`);
+  console.log(response);
   const data = await response.json();
-  console.log(data);
+  console.log(data), "this is Data";
   return data;
 });
 export const getSubCategories = createAsyncThunk(

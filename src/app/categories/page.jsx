@@ -7,11 +7,13 @@ import { getCategories } from "../../redux/productSlice";
 import { useEffect } from "react";
 
 const Categories = () => {
+  console.log(process.env.VITE_REACT_APP, "categories page url");
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.products.categories);
   const categoriesStatus = useSelector(
     (state) => state.products.categoriesStatus
   );
+  console.log(categories, "CATS");
 
   useEffect(() => {
     dispatch(getCategories());

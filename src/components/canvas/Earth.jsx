@@ -37,7 +37,7 @@ const EarthCanvas = () => {
       className={`w-full h-screen flex flex-col justify-around content-center ${styles.paddingX}`}
     >
       <motion.div className="w-full items-basis flex  h-fit  flex-col pt-10">
-        <h1 className=" text-white  py-10 text-3xl font-extrabold sm:text-7xl font-BebasNeue text-center tracking-wider">
+        <h1 className=" text-white  py-10 text-5xl  font-extrabold sm:text-7xl font-BebasNeue text-center tracking-wider">
           SECURITY CAMERA VENDOR
         </h1>
         <p

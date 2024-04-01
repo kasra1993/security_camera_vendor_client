@@ -73,17 +73,17 @@ export default function HomeCarousel() {
               spaceBetween: 30,
             },
           }}
-          className="mySwiper my-10"
+          className="mySwiper my-10 "
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="w-1/2 h-full bg-[#fef2f2] flex justify-center align-middle flex-col px-10">
+              <div className="md:w-1/2 w-full  h-full bg-[#fef2f2] flex justify-center align-middle flex-col px-10">
                 <h1 className="font-bold text-center text-[50px] tracking-widest">
                   {slide.title}
                 </h1>
                 <h3 className="text-[13px]">{slide.description}</h3>
               </div>
-              <div className="w-1/2 h-full">
+              <div className="md:w-1/2 w-full  h-full">
                 <Image
                   src={slide.image}
                   alt={slide.title}
